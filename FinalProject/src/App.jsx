@@ -7,17 +7,19 @@ import PostInfo from "./Pages/postInfo.jsx";
 import EditPost from "./Pages/editPost.jsx";
 
 const App = () => {
+  const [search, setSearch] = useState(' ');
+  console.log(search);
   return (
     <div className="App">
       <BrowserRouter>
         <div className="header">
           <Link to={"/"} > <h2 className="siteTitle"> SongHub </h2> </Link>
-          <input type="text" placeholder="Search" className="siteSearch" />
+          <input type="text" placeholder="Search" className="siteSearch" onChange={(e) => setSearch(e.target.value)}/>
           <Link to={"/create"}> <h3 className="siteCreate"> Create New Post </h3> </Link>
         </div>
 
         <Routes>
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<HomePage search={search}/>} />
           <Route path="/create" element={<CreatePost />} />
           <Route path="/post/:id" element={<PostInfo />} />
           <Route path="/post/:id/edit" element={<EditPost />} />

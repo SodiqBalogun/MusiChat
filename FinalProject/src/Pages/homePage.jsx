@@ -2,7 +2,7 @@ import { supabase } from "../client.js";
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-const HomePage = () => {
+const HomePage = ( {search} = props ) => {
     const [posts, setPosts] = useState([]); // Store the posts
     const [error, setError] = useState(null);
     const [sortBy, setSortBy] = useState("recency");
@@ -31,6 +31,11 @@ const HomePage = () => {
         fetchPosts();
     }, [sortBy]); 
 
+    const filteredPosts = posts.filter((post) =>
+        post.title.toLowerCase().includes(search.toLowerCase()) ||
+        post.content.toLowerCase().includes(search.toLowerCase())
+    );
+
     return (
         <div className="HomePage">
             <div className="filtersFull">
@@ -41,11 +46,11 @@ const HomePage = () => {
                 </div>
             </div>
             {error && <p>Error: {error}</p>} {/* Display error if exists */}
-            {posts.length === 0 ? (
+            {filteredPosts.length === 0 ? (
                 <p>No posts available.</p> // Show message when no posts are available
             ) : (
                 <div>
-                    {posts.map((post) => (
+                    {filteredPosts.map((post) => (
                         <div key={post.id} className="post">
                             <Link to={`/post/${post.id}`}>
                                 <p>Posted at: {new Date(post.created_at).toLocaleString()}</p> 
