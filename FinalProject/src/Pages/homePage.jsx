@@ -5,11 +5,19 @@ import { useEffect, useState } from 'react';
 const HomePage = () => {
     const [posts, setPosts] = useState([]); // Store the posts
     const [error, setError] = useState(null);
+    const [sortBy, setSortBy] = useState("recency");
 
     const fetchPosts = async () => {
-        const { data, errorT } = await supabase
-            .from('Posts')
-            .select('*'); 
+        let query = supabase.from('Posts').select('*');
+
+        // Sort based on the selected sorting option
+        if (sortBy === "recency") {
+            query = query.order('created_at', { ascending: true });
+        } else if (sortBy === "popularity") {
+            query = query.order('upvotes', { ascending: true });
+        }
+
+        const { data, errorT } = await query;
 
         if (errorT) {
             console.error("Error fetching posts:", errorT);
@@ -21,15 +29,15 @@ const HomePage = () => {
 
     useEffect(() => {
         fetchPosts();
-    }, []); 
+    }, [sortBy]); 
 
     return (
         <div className="HomePage">
             <div className="filtersFull">
                 <h3> Order by: </h3>
                 <div className="filters">
-                    <button className="newFilter"> Newest </button>
-                    <button className="popFilter"> Most Popular </button>
+                    <button className="newFilter" onClick={() => setSortBy("recency")}> Newest </button>
+                    <button className="popFilter" onClick={() => setSortBy("popularity")}> Most Popular </button>
                 </div>
             </div>
             {error && <p>Error: {error}</p>} {/* Display error if exists */}
