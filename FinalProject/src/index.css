@@ -55,6 +55,12 @@ input {
   color: black;
 }
 
+textarea {
+  /* background-color: white; */
+  background-color: rgb(198, 226, 225);
+  color: black;
+}
+
 .HomePage {
   display: grid;
   justify-content: center;
@@ -133,7 +139,10 @@ input {
 }
 
 #commentInput {
+  margin: auto;
   margin: 0px 20px 0px 0px;
+  text-wrap:wrap;
+  width: 700px;
 }
 
 .commentLone {

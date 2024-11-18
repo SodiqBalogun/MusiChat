@@ -31,10 +31,7 @@ const HomePage = ( {search} = props ) => {
         fetchPosts();
     }, [sortBy]); 
 
-    const filteredPosts = posts.filter((post) =>
-        post.title.toLowerCase().includes(search.toLowerCase()) ||
-        post.content.toLowerCase().includes(search.toLowerCase())
-    );
+    const filteredPosts = posts.filter((post) => post.title.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <div className="HomePage">

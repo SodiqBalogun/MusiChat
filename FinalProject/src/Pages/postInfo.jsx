@@ -105,7 +105,7 @@ const PostInfo = () => {
 
             <div className="comments">
                 <div className="commentPosting">
-                    <input type="text" placeholder="Leave a Comment..." id="commentInput" />
+                    <textarea type="text" rows="10" maxLength="900" placeholder="Leave a Comment..." id="commentInput" />
                     <button className="postComment" onClick={createComment}> Post </button>
                 </div>
                 {comments && comments.map((comment) => (
