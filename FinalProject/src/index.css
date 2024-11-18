@@ -15,7 +15,6 @@
 
 body {
   background-color: rgb(103, 215, 163);
-  height: 1000px;
 }
 
 .header {
@@ -80,6 +79,8 @@ input {
 .post {
   background-color: rgb(115, 195, 191);;
   margin: auto;
+  margin: 0px 0px 20px 0px;
+  padding: 5px 0px 5px 20px;
   width: 1055px;
   border-radius: 10px;
 }
