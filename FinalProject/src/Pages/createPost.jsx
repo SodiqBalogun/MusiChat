@@ -30,7 +30,7 @@ const CreatePost = () => {
                     <textarea type="text" rows="7" maxLength="900" placeholder="Post Content (Optional)" className="bigInp" id="contentPos" /> 
                 </div>
                 <div className="postImage">
-                    <textarea type="text" maxLength="200" placeholder="Image Url (Optional)" className="smallInp" id="imgPos" /> 
+                    <textarea type="text" rows="7" maxLength="2000" placeholder="Image Url (Optional)" className="smallInp" id="imgPos" /> 
                 </div>
                 <button onClick={createNew}> Create Post </button>
             </div>

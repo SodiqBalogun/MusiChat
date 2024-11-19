@@ -46,16 +46,16 @@ const EditPost = () => {
 
     return (
         <div className="EditPost">
-            <h3> Editing Post </h3>
+            <h2> Editing Post </h2>
             <div className="postSel">
                 <div className="postTitle">
-                    <input type="text" placeholder="Title (Required)" className="smallInp" id="titlePos" value={title} onChange={(e) => setTitle(e.target.value)} /> 
+                    <textarea type="text" maxLength="150" placeholder="Title (Required)" className="smallInp" id="titlePos" value={title} onChange={(e) => setTitle(e.target.value)} /> 
                 </div>
                 <div className="postContent">
-                    <input type="text" placeholder="Post Content (Optional)" className="bigInp" id="contentPos" value={content} onChange={(e) => setContent(e.target.value)} /> 
+                    <textarea type="text" rows="7" maxLength="900" placeholder="Post Content (Optional)" className="bigInp" id="contentPos" value={content} onChange={(e) => setContent(e.target.value)} /> 
                 </div>
                 <div className="postImage">
-                    <input type="text" placeholder="Image Url (Optional)" className="smallInp" id="imgPos" value={image} onChange={(e) => setImage(e.target.value)} /> 
+                    <textarea type="text" rows="7" maxLength="2000" placeholder="Image Url (Optional)" className="smallInp" id="imgPos" value={image} onChange={(e) => setImage(e.target.value)} /> 
                 </div>
                 <button onClick={updatePost}> Update Post </button>
             </div>
