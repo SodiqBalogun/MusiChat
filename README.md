@@ -1,4 +1,4 @@
-# Web Development Final Project - *MuseChat*
+# Web Development Final Project - *MusiChat*
 
 Submitted by: **Sodiq Balogun**
 
