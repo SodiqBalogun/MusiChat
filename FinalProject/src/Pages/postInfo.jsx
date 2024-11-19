@@ -58,10 +58,6 @@ const PostInfo = () => {
         }
     }
 
-    const editPost = async () => {
-
-    }
-
     const deletePost = async () => {
         const { error } = await supabase
             .from('Posts')
@@ -87,9 +83,12 @@ const PostInfo = () => {
         <div className="PostInfo">
             <div className="postD">
                 <div className="top">
+                    <div className="postTimeAndEdit">
                     <h3>Posted at: {new Date(post.created_at).toLocaleString()}</h3>
+                    {post.edited && <h4 style={{color: "#ddd492"}}> *edited </h4>}
+                    </div>
                     <div className="icons">
-                        <Link to ={`/post/${post.id}/edit`}> <img src={editIconBlack} alt="Black Edit Icon" height="40px" className="icon" onClick={editPost} /> </Link>
+                        <Link to ={`/post/${post.id}/edit`}> <img src={editIconBlack} alt="Black Edit Icon" height="40px" className="icon" /> </Link>
                         <img src={deleteIcon} alt="Red Delete Icon" height="40px" className="icon" onClick={deletePost} />
                     </div>
                 </div>

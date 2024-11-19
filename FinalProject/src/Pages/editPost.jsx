@@ -30,7 +30,7 @@ const EditPost = () => {
     const updatePost = async () => {
         const { error } = await supabase
             .from('Posts')
-            .update({ title, content, image })
+            .update({ title, content, image, edited: true })
             .eq('id', id);
 
         if (error) console.error("Error updating post:", error);

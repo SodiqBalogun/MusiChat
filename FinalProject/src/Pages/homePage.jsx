@@ -50,7 +50,10 @@ const HomePage = ( {search} = props ) => {
                     {filteredPosts.map((post) => (
                         <div key={post.id} className="post">
                             <Link to={`/post/${post.id}`}>
-                                <p>Posted at: {new Date(post.created_at).toLocaleString()}</p> 
+                                <div className="timeandEdit">
+                                    <p>Posted at: {new Date(post.created_at).toLocaleString()}</p>
+                                    {post.edited && <h4 style={{color: "#ddd492"}}> *edited </h4>}
+                                </div>
                                 <h2>{post.title}</h2>
                                 <p> {post.upvotes} upvotes </p>
                             </Link>

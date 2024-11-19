@@ -15,7 +15,7 @@
 
 body {
   background-color: rgb(103, 215, 163);
-  height: 1000px;
+  min-height: 100vh;
 }
 
 .header {
@@ -26,11 +26,19 @@ body {
 }
 
 .siteTitle {
-  margin: 15px 0px 0px 200px;
+  margin: 5px 0px 0px 200px;
+  text-shadow: 1px 1px 2px white, 0 0 1em rgb(126, 117, 47), 0 0 0.2em blue;
+  font-size: 40px;
+  color: #3ad2ea;
 }
 
 .siteCreate {
   margin: 15px 200px 0px 0px;
+  text-shadow: 1px 1px 2px rgb(95, 77, 77), 0 0 1em rgb(190, 177, 78), 0 0 0.2em rgb(146, 146, 208);
+}
+
+.siteTitle:hover, .siteCreate:hover {
+  color: white;
 }
 
 .siteSearch {
@@ -42,11 +50,13 @@ body {
 .CreatePost {
   display: grid;
   justify-content: center;
+  padding: 0px 0px 230px 0px;
 }
 
 .EditPost {
   display: grid;
   justify-content: center;
+  padding: 0px 0px 230px 0px;
 }
 
 input {
@@ -110,6 +120,14 @@ textarea {
   border-radius: 10px;
 }
 
+.timeandEdit {
+  display: flex;
+}
+
+.timeandEdit h4{
+  margin-left: 20px;
+}
+
 .top {
   display: flex;
 }
@@ -156,7 +174,6 @@ textarea {
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
