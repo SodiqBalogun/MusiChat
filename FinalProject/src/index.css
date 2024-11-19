@@ -61,6 +61,11 @@ textarea {
   color: black;
 }
 
+#titlePos, #contentPos, #imgPos {
+  width: 800px;
+  background-color: rgb(221, 235, 234);
+}
+
 .HomePage {
   display: grid;
   justify-content: center;

@@ -21,16 +21,16 @@ const CreatePost = () => {
 
     return (
         <div className="CreatePost">
-            <h3> Create a new post! </h3>
+            <h2> Create a new post! </h2>
             <div className="postSel">
                 <div className="postTitle">
-                    <input type="text" placeholder="Title (Required)" className="smallInp" id="titlePos" /> 
+                    <textarea type="text" maxLength="150" placeholder="Title (Required)" className="smallInp" id="titlePos" /> 
                 </div>
                 <div className="postContent">
-                    <input type="text" placeholder="Post Content (Optional)" className="bigInp" id="contentPos" /> 
+                    <textarea type="text" rows="7" maxLength="900" placeholder="Post Content (Optional)" className="bigInp" id="contentPos" /> 
                 </div>
                 <div className="postImage">
-                    <input type="text" placeholder="Image Url (Optional)" className="smallInp" id="imgPos" /> 
+                    <textarea type="text" maxLength="200" placeholder="Image Url (Optional)" className="smallInp" id="imgPos" /> 
                 </div>
                 <button onClick={createNew}> Create Post </button>
             </div>
