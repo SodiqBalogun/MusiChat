@@ -2,7 +2,7 @@
 
 Submitted by: **Sodiq Balogun**
 
-This web app: **Uses react to create an interactive chat app. The app uses a supabase database to hold information about all posts, allowing the user to create, upvote, edit, delete, and comment on posts. **
+This web app: **Uses react to create an interactive chat app. The app uses a supabase database to hold information about all posts, allowing the user to create, upvote, edit, delete, and comment on posts.**
 
 Time spent: **10** hours spent in total
 
