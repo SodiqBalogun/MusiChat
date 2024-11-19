@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <div className="header">
-          <Link to={"/"} > <h2 className="siteTitle"> MuseChat </h2> </Link>
+          <Link to={"/"} > <h2 className="siteTitle"> MusiChat </h2> </Link>
           <input type="text" placeholder="Search" className="siteSearch" onChange={(e) => setSearch(e.target.value)}/>
           <Link to={"/create"}> <h2 className="siteCreate"> Create New Post </h2> </Link>
         </div>
