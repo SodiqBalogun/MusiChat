@@ -21,7 +21,7 @@ The following functionality is completed:
 - [x] **Users can leave comments underneath a post on the post's separate page**
 - [x] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
 - [x] **A previously created post can be edited or deleted from its post page**
-- [x] **Added a visual indicator that shows if a post has been edited.
+- [x] **Added a visual indicator that shows if a post has been edited.**
 
 ## Video Walkthrough
 
