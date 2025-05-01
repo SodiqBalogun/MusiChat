@@ -1,14 +1,14 @@
 # *MusiChat*
 
-Submitted by: **Sodiq Balogun**
+By: **Sodiq Balogun**
 
 This web app: **Uses react to create an interactive chat app. The app uses a supabase database to hold information about all posts, allowing the user to create, upvote, edit, delete, and comment on posts.**
 
 Time spent: **10** hours spent in total
 
-## Required Features
+## Features
 
-The following **required** functionality is completed:
+The following functionality is completed:
 
 - [x] **A create form that allows the user to create posts**
 - [x] **Posts have a title and optionally additional textual content and/or an image added as an external image URL**
@@ -21,40 +21,20 @@ The following **required** functionality is completed:
 - [x] **Users can leave comments underneath a post on the post's separate page**
 - [x] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
 - [x] **A previously created post can be edited or deleted from its post page**
-
-The following **optional** features are implemented:
-
-- [ ] Users can only edit and deleted posts or delete comments by entering the secret key, which is set by the user during post creation
-- [ ] Upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them.
-- [ ] Users can repost a previous post by referencing its post ID. On the post page of the new post, the referenced post is displayed and linked, creating a thread
-- [ ] Users can customize the interface of the web app
-- [ ] Users can share and view web videos
-- [ ] Users can set flags while creating a post. Then users can filter posts by flags on the home feed.
-- [ ] Users can upload images directly from their local machine as an image file
-- [ ] Display a loading animation whenever data is being fetched
-
-The following **additional** features are implemented:
-
-* [x] List anything else that you added to improve the site's functionality!
-* Added a visual indicator that shows if a post has been edited.
+- [x] **Added a visual indicator that shows if a post has been edited.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough:
 
 ![FinalProject3](https://github.com/user-attachments/assets/62d8b87e-2b8f-407a-b875-6c93d690a074)
 
-
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
 
-I think this app was mostly straightforward, as it is utilizing many aspects of what we've already worked on. Some of the challenges were in more minor things like figuring out how to implement commenting through supabase.
+I think this app was mostly straightforward, as it is utilizing many aspects of what I've already worked on. Some of the challenges were in minor things, like figuring out how to implement commenting through Supabase.
 
 ## License
 
